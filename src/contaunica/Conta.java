@@ -34,4 +34,19 @@ public class Conta {
 		System.out.println("--- Fim do depósito ---");
 		System.out.println("");
 	}
+	
+	public void Sacar(double pValor) {
+		System.out.println("");
+		System.out.println("--- Realizando saque ---");
+		System.out.println("- Saldo anterior: " + this.saldo);
+		
+		if(pValor <= this.saldo) {
+		this.saldo -= pValor;
+		System.out.println("- Saldo Atual: " + this.saldo);
+	}
+		else {
+			System.out.println("- Saldo insuficiente");
+		}
+		System.out.println("--- Fim do saque ---");
+}
 }
